@@ -16,7 +16,7 @@ If the above sounds like you, then you're in luck because the **winservicetools*
 
 ## Quick Start
 
-You can get a Python function up and running as a Windows service in as few as 20 lines of code see the abbreviated example below or see more complete examples in the [examples folder](/examples) in the repo.
+You can get a Python function up and running as a Windows service in as few as 20 lines of code see the abbreviated example below or see more complete examples in the [examples folder](https://github.com/mechsin/winservicetools/tree/main/examples) in the repo.
 
 ```
 import threading
@@ -97,7 +97,7 @@ The service is installed by the `winserviceutils.exe`. You can still you pywin32
 
 `winserviceutils.exe install --import yourpackage`
 
-The [package](/examples/package) example folder contains and example of a simple Windows service package.
+The [package](https://github.com/mechsin/winservicetools/tree/main/examples/package) example folder contains and example of a simple Windows service package.
 
 If the the package isn't on the Python path then when you run the install you will see an error message similar to
 
