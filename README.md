@@ -22,7 +22,7 @@ You can get a Python function up and running as a Windows service in as few as 2
 import threading
 import time
 
-import winserviceutils
+import winservicetools
 
 def main(service_event: threading.Event):
     while service_event.is_set():
@@ -35,7 +35,7 @@ kwargs = {
           'svc_description': 'Simple Python script as a Windows service',
          }
 
-scriptservice = winserviceutils.WindowsSvc.new_service(**kwargs)
+scriptservice = winservicetools.WindowsSvc.new_service(**kwargs)
 
 if __name__ == "__main__":
     scriptservice.start()
@@ -93,9 +93,9 @@ The call to `start` method has to be protected by an if name main statement as s
 
 ## Installing the service
 
-The service is installed by the `winserviceutils.exe`. You can still you pywin32 `PythonService.exe` see the [Using PythonService.exe instead](#Using `PythonService.exe` instead) section. The `winserviceutils.exe` can install either a Python script or package as a service. The example is for a Python script but the exact same file would work for a package as long as it is on the Python import path. To install a package you would use the following line
+The service is installed by the `winservicetools.exe`. You can still you pywin32 `PythonService.exe` see the [Using PythonService.exe instead](#Using `PythonService.exe` instead) section. The `winservicetools.exe` can install either a Python script or package as a service. The example is for a Python script but the exact same file would work for a package as long as it is on the Python import path. To install a package you would use the following line
 
-`winserviceutils.exe install --import yourpackage`
+`winservicetools.exe install --import yourpackage`
 
 The [package](https://github.com/mechsin/winservicetools/tree/main/examples/package) example folder contains and example of a simple Windows service package.
 
@@ -105,7 +105,7 @@ If the the package isn't on the Python path then when you run the install you wi
 
 If you see this it your package isn't on the Python search path go back an make sure your package installed correctly and that you can `import` it from the Python prompt.
 
-For more help at the command line run `winserviceutils.exe --help`
+For more help at the command line run `winservicetools.exe --help`
 
 
 ### Using `PythonService.exe` instead
