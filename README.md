@@ -2,6 +2,8 @@
 
 Make running Python scripts and packages as Windows Services easy!
 
+Winservicetools is a library that aims to make implementing Python scripts and packages as Windows service easy and robust. Winservicetools uses [pywin32](https:///pypi.org/project/pywin32/) under the hood but provides a single class that can generate a new service class with a few bits of meta data and a target function to run. Winservicetools also provides a command line install tool that uses the Windows ``sc.exe create`` command via subprocess to install and update services. This also provides a better view of service processes from the Task Manger Details view.
+
 ## Audience
 
 Ever wanted to run a Python script or package as a Windows Service? You probably searched around and found that pywin32 supports this and then copied and pasted an example of a subclass of the  `wins32serviceutil.ServiceFramework` you found somewhere on the internet, made some changes, and if you are lucky, everything worked and you never looked back. But if you weren't lucky, spent hours debugging until something finally worked or you gave up. Not an ideal developer experience. It gets even worse if you want to implement another service. You copy all this cryptic boiler plate code that you just hope never breaks.
