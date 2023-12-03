@@ -3,7 +3,7 @@ import logging
 import os
 import sys
 
-import winserviceutils
+import winservicetools
 
 from examplesvc import main
 
@@ -38,7 +38,7 @@ kwargs = {
           'svc_description': 'Simple Python package as a Windows service',
          }
 
-scriptservice = winserviceutils.WindowsSvc.new_service(**kwargs)
+scriptservice = winservicetools.WindowsSvc.new_service(**kwargs)
 
 if __name__ == "__main__":
     scriptservice.start()

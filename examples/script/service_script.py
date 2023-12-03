@@ -7,7 +7,7 @@ import os
 import threading
 import time
 
-import winserviceutils
+import winservicetools
 
 logger = logging.getLogger(__name__)
 
@@ -42,7 +42,7 @@ kwargs = {
           'svc_description': 'Simple Python script as a Windows service',
          }
 
-scriptservice = winserviceutils.WindowsSvc.new_service(**kwargs)
+scriptservice = winservicetools.WindowsSvc.new_service(**kwargs)
 
 if __name__ == "__main__":
     scriptservice.start()
