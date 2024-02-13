@@ -20,7 +20,7 @@ logdir = os.path.join(sys.prefix, '..')
 kwargs = {
           'filename': os.path.join(logdir, 'package-service.log'),
           'filemode': 'w',
-          'format': '%(asctime)s\t%(levelname)s:%(process)d:%(message)s',
+          'format': '%(asctime)s\t%(name)s:%(levelname)s:%(process)d:%(message)s',
           'level': logging.NOTSET,
          }
 logging.basicConfig(**kwargs)

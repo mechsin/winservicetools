@@ -16,7 +16,7 @@ here = os.path.dirname(__file__) if os.path.dirname(__file__) else os.getcwd()
 kwargs = {
           'filename': os.path.join(here, 'script-service.log'),
           'filemode': 'w',
-          'format': '%(asctime)s\t%(levelname)s:%(process)d:%(message)s',
+          'format': '%(asctime)s\t%(name)s:%(levelname)s:%(process)d:%(message)s',
           'level': logging.NOTSET,
          }
 logging.basicConfig(**kwargs)
