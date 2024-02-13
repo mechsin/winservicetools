@@ -1,5 +1,6 @@
 
 import argparse
+import os
 
 from winservicetools import utils
 
@@ -9,6 +10,7 @@ def cli_main():
     script_kwargs = {
                      'dest': 'script_path',
                      'required': False,
+                     'type': os.path.abspath,
                     }
     package_pargs = ('--import',)
     package_kwargs = {
